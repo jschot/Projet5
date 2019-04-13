@@ -1,0 +1,10 @@
+Difficulté_enfant=[("Blanche neige à mangé une poire empoisonnée","Faux","c'était une pomme"),
+                   ("Dans la reine des neiges la soeur d'Anna s'appelle Elsa","Vrai",""),
+                   ("Il y a 100 dalmatiens","Faux","Il y en a 101"),
+                   ("L'animal d'aladin est un chat","Faux","c'est un chimpanzé"),
+                   ("Le passe-temps de Belle dans la belle et la bête est de regarder des films","Faux","Elle aime lire des livres"),
+                   ("Le nom original de Stitch dans Lilo et Stitch est expérience 626","Vrai",""),
+                   ("Les cheveux de Raiponce sont capable de guérir toutes blessures","Vrai",""),
+                   ("Mulan est d'origine japonaise","Faux","elle est chinoise"),
+                   ("Dans Peter Pan pour se rendre au Pays Imaginaire il faut courir!","Faux","Il faut voler"),
+                   ("Le caméléon de de Raiponse s'appelle Pascal","Vrai","")]
