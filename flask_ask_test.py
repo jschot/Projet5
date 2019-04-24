@@ -43,9 +43,12 @@ qsimple = [("La capital de la France est Paris",True,""),
 
 now1 = None
 now2 = None
+point = 0
 
 @ask.launch
 def start():
+    global point
+    point = 0
     return question("Voulez-vous jouez ?")
 
 
@@ -82,7 +85,9 @@ def simple():
 def repvrai() :
     global now1
     global now2
+    global point
     if now1[now2][1] == True :
+        point += 1
         return question("Bonne réponse. Dites continuer pour continuer ou stop pour arreter de jouer")
     else :
         return question("Mauvaise réponse : {}. Dites continuer pour continuer ou stop pour arreter de jouer".format(now1[now2][2]))
@@ -91,7 +96,9 @@ def repvrai() :
 def repvrai() :
     global now1
     global now2
+    global point
     if now1[now2][1] == False :
+        point += 1
         return question("Bonne réponse : {}. Dites continuer pour continuer ou stop pour arreter de jouer".format(now1[now2][2]))
     else :
         return question("Mauvaise réponse. Dites continuer pour continuer ou stop pour arreter de jouer")
@@ -107,7 +114,13 @@ def conti():
 
 @ask.intent('NonIntent')
 def non() :
-    return statement("Tant pis")
+    global point
+    if point == 0 :
+        return statement("Tant pis, 0 point.")
+    elif point == 1 :
+        return statement("Merci d'avoir jouer, vous finissez avec {} point.".format(point))
+    else :
+        return statement("Merci d'avoir jouer, vous finissez avec {} points.".format(point))
 
 
 if __name__ == '__main__':
